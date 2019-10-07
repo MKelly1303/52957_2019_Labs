@@ -9,11 +9,10 @@ crossorigin="anonymous">
 	
 	<body>
 	<h1>Cars</h1>
-	<div></div>
-	<button>Create</button>
+	<div><button id="showCreateButton" onclick="showCreate()">Create</button></div>
 	<h1>All Cars</h1>
 		<div>
-			<table class="table"> <!--this class="table" is from bootstrap and applies it settings to it."--> 
+			<table class="table" id="carTable">
 			<tr>
 				<th>reg</th>
 				<th>mark</th>
@@ -27,29 +26,29 @@ crossorigin="anonymous">
 				<td>Ford</td>
 				<td>Modeo</td>
 				<td>25,000</td>
-				<td><button>update</button></td>
-				<td><button>delete</button></td>
+				<td><button onclick="showUpdate(this)">Update</button></td>
+				<td><button onclick="doDelete(this)">Delete</button></td>
 			</tr>
 			<tr>
 				<td>191 G 123</td>
 				<td>Fiat</td>
 				<td>Punto</td>
 				<td>15,000</td>
-				<td><button>update</button></td>
-				<td><button>delete</button></td>
+				<td><button onclick="showUpdate(this)">Update</button></td>
+				<td><button onclick="doDelete(this)">Delete</button></td>
 			</tr>
 			<tr>
 				<td>192 LM 123</td>
-				<td>Mitsubishi</td>
-				<td>Outlander</td>
+				<td>Nissan</td>
+				<td>Almera</td>
 				<td>35,000</td>
-				<td><button>update</button></td>
-				<td><button>delete</button></td>
+				<td><button onclick="showUpdate(this)">Update</button></td>
+				<td><button onclick="doDelete(this)">Delete</button></td>
 			</tr>
 			</table>
 		</div>
-		<div>
-			<h2><span>Create a</span> <span>Update this</span> Car</h2>
+		<div id='createUpdateForm' style="display: none">
+			<h2><span id="createLabel">Create a</span> <span id="updateLabel">Update this</span> Car</h2>
 			Reg <input type="text" name="reg"><br/>
 			Make <select name="make">
 				<option value="Ford">Ford</option>
@@ -58,8 +57,26 @@ crossorigin="anonymous">
 			</select><br/>
 			Model <input type="text" name="model"><br/>
 			Price <input type="number" name="price"><br/>
-			<span><button>Create</button></span>
-			<span><button>Update</button></span>
+			<span><button id="doCreateButton" onclick="doCreate()">>Create</button></span>
+			<span><button id="doUpdateButton" onclick="doUpdate()">Update</button></span>
 		</div>
+		<script>
+            function showCreate(){
+			document.getElementById('showCreateButton').style.display="none"
+			document.getElementById('carTable').style.display="none"
+			document.getElementById('createUpdateForm').style.display="block"	
+
+			document.getElementById('createLabel').style.display="inline"
+			document.getElementById('updateLabel').style.display="none"
+
+			document.getElementById('doCreateButton').style.display="block"
+			document.getElementById('doUpdateButton').style.display="none"			
+            }
+			function showUpdate(buttonElement){
+		    document.getElementById('showCreateButton').style.display="none"
+			document.getElementById('carTable').style.display="none"	
+			
+			}
+         </script>
 	</body>
 </html>
