@@ -1,0 +1,65 @@
+<html>
+	<head>
+		<title>View Cars</title>
+		<link rel="stylesheet"
+href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+crossorigin="anonymous">
+	</head>
+	
+	<body>
+	<h1>Cars</h1>
+	<div></div>
+	<button>Create</button>
+	<h1>All Cars</h1>
+		<div>
+			<table class="table"> <!--this class="table is from bootstrap and applies it settings to it."--> 
+			<tr>
+				<th>reg</th>
+				<th>mark</th>
+				<th>model</th>
+				<th>price</th>
+				<th>Update</th>
+				<th>Delete</th>
+			</tr>
+			<tr>
+				<td>191 M0 123</td>
+				<td>Ford</td>
+				<td>Modeo</td>
+				<td>25,000</td>
+				<td><button>update</button></td>
+				<td><button>delete</button></td>
+			</tr>
+			<tr>
+				<td>191 G 123</td>
+				<td>Fiat</td>
+				<td>Punto</td>
+				<td>15,000</td>
+				<td><button>update</button></td>
+				<td><button>delete</button></td>
+			</tr>
+			<tr>
+				<td>192 LM 123</td>
+				<td>Mitsubishi</td>
+				<td>Outlander</td>
+				<td>35,000</td>
+				<td><button>update</button></td>
+				<td><button>delete</button></td>
+			</tr>
+			</table>
+		</div>
+		<div>
+			<h2><span>Create a</span> <span>Update this</span> Car</h2>
+			Reg <input type="text" name="reg"><br/>
+			Make <select name="make">
+				<option value="Ford">Ford</option>
+				<option value="Fiat">Fiat</option>
+				<option value="Nissan">Nissan</option>
+			</select><br/>
+			Model <input type="text" name="model"><br/>
+			Price <input type="number" name="price"><br/>
+			<span><button>Create</button></span>
+			<span><button>Update</button></span>
+		</div>
+	</body>
+</html>
