@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <title>
+            read a simple json
+        </title>
+    </head>
+    <body>
+  		<button onclick="readJSON()">go</button>
+		  <div id="output"></div>
+    </body>
+    <script>
+      function readJSON(){
+        var obj = JSON.parse('{"isbn": 1234567, "Author": "Andrew Beatty","Title" : "the emptness of ping-pong balls"}')
+        output = obj.Title
+        document.getElementById("output").innerText = output;
+    }
+    </script>
+</html>
