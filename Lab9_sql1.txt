@@ -1,0 +1,118 @@
+Enter password: ****
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 11
+Server version: 8.0.14 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2019, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> show databases
+    -> ;
++--------------------+
+| Database           |
++--------------------+
+| bus                |
+| bus2               |
+| employees          |
+| employees2         |
+| garage             |
+| hospital           |
+| information_schema |
+| lab5               |
+| lab5p2             |
+| myfirstdatabase    |
+| mysql              |
+| performance_schema |
+| school             |
+| sys                |
+| world              |
++--------------------+
+15 rows in set (0.24 sec)
+
+mysql> create database datarep;
+Query OK, 1 row affected (1.22 sec)
+
+mysql> use datarep;
+Database changed
+mysql> show tables;
+Empty set (0.67 sec)
+
+mysql> show tables;
+Empty set (0.00 sec)
+
+mysql> create table student ( id int NOT NULL auto_increment, firstname varchar(100),  age int(3), PRIMARY KEY(id) );
+Query OK, 0 rows affected (3.38 sec)
+
+mysql> insert into student (firstname, age) values (’joe’,56);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '?joe?,56)' at line 1
+mysql> insert into student (firstname, age) values ("joe",56);
+Query OK, 1 row affected (0.36 sec)
+
+mysql> select * from student;
++----+-----------+------+
+| id | firstname | age  |
++----+-----------+------+
+|  1 | joe       |   56 |
++----+-----------+------+
+1 row in set (0.29 sec)
+
+mysql> update student set firstname="mary" where id = 1;
+Query OK, 1 row affected (0.18 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from student;
++----+-----------+------+
+| id | firstname | age  |
++----+-----------+------+
+|  1 | mary      |   56 |
++----+-----------+------+
+1 row in set (0.00 sec)
+
+mysql> Delete from student where id = 1;
+Query OK, 1 row affected (0.19 sec)
+
+mysql> select * from student;
+Empty set (0.00 sec)
+
+mysql> create table book
+    -> (id int NOT NULL auto_increment, title varchar(100), author varchar(100), price int(3),
+    -> PRIMARY KEY(id));
+Query OK, 0 rows affected (0.63 sec)
+
+mysql> insert into book (title, author, price) values ("Book Title 1", "Joe Blogss", 1);
+Query OK, 1 row affected (0.15 sec)
+
+mysql> insert into book (title, author, price) values ("The Sequel", "Joe Blogss", 30);
+Query OK, 1 row affected (0.56 sec)
+
+mysql> insert into book (title, author, price) values ("The New One", "Joe Blogss", 10);
+Query OK, 1 row affected (0.12 sec)
+
+mysql> select * from book;
++----+--------------+------------+-------+
+| id | title        | author     | price |
++----+--------------+------------+-------+
+|  1 | Book Title 1 | Joe Blogss |     1 |
+|  2 | The Sequel   | Joe Blogss |    30 |
+|  3 | The New One  | Joe Blogss |    10 |
++----+--------------+------------+-------+
+3 rows in set (0.05 sec)
+
+mysql> delete from book where id = 2;
+Query OK, 1 row affected (1.03 sec)
+
+mysql> select * from book;
++----+--------------+------------+-------+
+| id | title        | author     | price |
++----+--------------+------------+-------+
+|  1 | Book Title 1 | Joe Blogss |     1 |
+|  3 | The New One  | Joe Blogss |    10 |
++----+--------------+------------+-------+
+2 rows in set (0.00 sec)
+
+mysql>

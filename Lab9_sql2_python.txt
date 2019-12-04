@@ -1,0 +1,30 @@
+C:\Users\Mark\Desktop\GMIT\S4\DataRepresent_52957\52957_2019_Labs>python Lab09_02_01.py
+
+C:\Users\Mark\Desktop\GMIT\S4\DataRepresent_52957\52957_2019_Labs>python Lab09_02_01.py
+
+C:\Users\Mark\Desktop\GMIT\S4\DataRepresent_52957\52957_2019_Labs>python Lab09_02_02.py
+
+C:\Users\Mark\Desktop\GMIT\S4\DataRepresent_52957\52957_2019_Labs>python Lab09_02_02.py
+1 record inserted, ID: 2
+
+
+C:\Users\Mark\Desktop\GMIT\S4\DataRepresent_52957\52957_2019_Labs>python Lab09_02_03.py
+(2, 'Jim', 39)
+
+
+C:\Users\Mark\Desktop\GMIT\S4\DataRepresent_52957\52957_2019_Labs>python Lab09_02_04_Update.py
+update completed
+
+C:\Users\Mark\Desktop\GMIT\S4\DataRepresent_52957\52957_2019_Labs>python Lab09_02_05_delete.py
+delete completed
+
+
+C:\Users\Mark\Desktop\GMIT\S4\DataRepresent_52957\52957_2019_Labs>python Lab09_02_DAO_testcode.py
+[(5, 'mark', 45)]
+[(5, 'Fred', 21)]
+(1, 'Mary', 23)
+(3, 'mark', 45)
+(4, 'Fred', 21)
+(5, 'Fred', 21)
+delete done
+delete done
